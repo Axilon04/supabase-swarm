@@ -466,24 +466,24 @@ networks:
     external: true
 
 configs:
-  99-logs.sql:
-    external: true
-  99-realtime.sql:
-    external: true
-  99-roles.sql:
-    external: true
-  98-webhooks.sql:
-    external: true
-  99-jwt.sql:
-    external: true
-  97-_supabase.sql:
-    external: true
-  99-pooler.sql:
-    external: true
-
-  vector.yml:
-    external: true
   kong.yml:
-    external: true
+    file: ./volumes/api/kong.yml
+  vector.yml:
+    file: ./volumes/logs/vector.yml
   main.ts:
-    external: true
+    file: ./volumes/functions/main/index.ts
+
+  99-logs.sql:
+    file: ./volumes/db/99-logs.sql
+  99-realtime.sql:
+    file: ./volumes/db/99-realtime.sql
+  99-roles.sql:
+    file: ./volumes/db/99-roles.sql
+  98-webhooks.sql:
+    file: ./volumes/db/98-webhooks.sql
+  99-jwt.sql:
+    file: ./volumes/db/99-jwt.sql
+  97-_supabase.sql:
+    file: ./volumes/db/97-_supabase.sql
+  99-pooler.sql:
+    file: ./volumes/db/99-pooler.sql
