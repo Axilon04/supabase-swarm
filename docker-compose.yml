@@ -474,16 +474,16 @@ configs:
     file: ./volumes/functions/main/index.ts
 
   99-logs.sql:
-    file: ./volumes/db/99-logs.sql
+    file: ./volumes/db/logs.sql
   99-realtime.sql:
-    file: ./volumes/db/99-realtime.sql
+    file: ./volumes/db/realtime.sql
   99-roles.sql:
-    file: ./volumes/db/99-roles.sql
+    file: ./volumes/db/roles.sql
   98-webhooks.sql:
-    file: ./volumes/db/98-webhooks.sql
+    file: ./volumes/db/webhooks.sql
   99-jwt.sql:
-    file: ./volumes/db/99-jwt.sql
+    file: ./volumes/db/jwt.sql
   97-_supabase.sql:
-    file: ./volumes/db/97-_supabase.sql
+    file: ./volumes/db/_supabase.sql
   99-pooler.sql:
-    file: ./volumes/db/99-pooler.sql
+    file: ./volumes/db/pooler.sql
