@@ -9,9 +9,9 @@ services:
       restart_policy:
         condition: any
       replicas: 1
-      # placement:
-      #   constraints:
-      #     - node.labels.server == production
+      placement:
+        constraints:
+          - node.labels.role == manager
     networks:
       - supabase_overlay
     healthcheck:
@@ -87,9 +87,9 @@ services:
       restart_policy:
         condition: any
       replicas: 1
-      # placement:
-      #   constraints:
-      #     - node.labels.server == production
+      placement:
+        constraints:
+          - node.labels.role == manager
     networks:
       - supabase_overlay
     healthcheck:
