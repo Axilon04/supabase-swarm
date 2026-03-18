@@ -44,6 +44,15 @@ services:
     networks:
       - supabase_overlay
     image: kong:2.8.1
+    ports:
+      - target: 8000
+        published: 8000
+        protocol: tcp
+        mode: ingress
+      - target: 8443
+        published: 8000
+        protocol: tcp
+        mode: ingress
     entrypoint: bash -c 'eval "echo \"$$(cat ~/temp.yml)\"" > ~/kong.yml && /docker-entrypoint.sh kong docker-start'
     deploy:
       restart_policy:
